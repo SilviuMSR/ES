@@ -1,0 +1,252 @@
+.codeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer {
+    padding: 30px;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+.subTitleContainer {
+    padding: 30px;
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+.contentContainer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.competitionContainer {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.competitionDetails {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-right: 18px;
+    flex-wrap: wrap;
+}
+
+.competitionDetails .codeWrapper {
+    flex:2;
+    padding-right: 30px;
+    padding-left: 18px;
+}
+
+.competitionDetails .filesWrapper {
+    padding-right: 30px;
+    padding-left: 18px;
+    max-height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.codeWrapper .code {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    text-align: left;   
+    overflow: auto;
+}
+
+.competitionDetails .competitionDetailsTitle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.competitionDetailsTitle .title {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.competitionDetailsTitle .subtitle {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 12px;
+}
+
+.footer {
+    margin-left: auto;
+}
+
+.footer .copyRightText {
+    margin-top: 0px;
+    color: #848484;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.footer .communityText {
+    margin-bottom: 0px;
+    color: #848484;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+
+.sidebarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    max-height: 100px;
+    background: #00135f;;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    border-bottom: 6px solid #00135f;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    position: relative;
+}
+
+.sidebarContainer:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 20px solid white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
+  }
+
+.sidebarCopyrightContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+}
+
+.sidebarCopyrightContainer .text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0;
+    padding: 0px 12px 0px 12px;
+    cursor: pointer;
+}
+
+.sidebarCopyrightContainer .text:hover {
+    color: #c0d3d3;
+}
+
+.searchInputs:focus {
+    outline: none;
+}
+
+.searchInputs::placeholder {
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.sidebarCopyrightContainer .searchInputs {
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.sidebarContentContainer {
+    flex: 2;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarContentContainer .sidebarItem {
+    color: white;
+    cursor: pointer;
+    padding-right: 16px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sidebarItem a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebarItem:hover a {
+    color: #c0d3d3;
+}
+
+.sidebarTitleContainer {
+    flex: 1;
+    padding-left: 50px;
+}
+
+
+.sidebarTitleContainer a {
+    text-decoration: none;
+}
+
+
+.sidebarTitleContainer .sidebarTitleText {
+    color: #fff;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 700;
+    padding: 20px 0 0px 0px;
+}
+
+.sidebarTitleContainer .sidebarSubtitleText {
+    padding-top: 0px;
+    margin-top: -10px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.csvUpload {
+    margin-top: 24px;
+	position: relative;
+	display: inline-block;
+}
+
+.csvLabel {
+    display: block;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.csvLabel:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+}
+    
+.csvInput {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 40;
+    opacity: 0;
+}

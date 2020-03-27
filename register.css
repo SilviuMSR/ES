@@ -1,0 +1,186 @@
+
+.sidebarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    max-height: 100px;
+    background: #00135f;;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    border-bottom: 6px solid #00135f;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    position: relative;
+}
+
+.sidebarContainer:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 20px solid white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
+  }
+
+ .sidebarCopyrightContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.sidebarCopyrightContainer .text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0;
+    padding: 0px 12px 0px 12px;
+    cursor: pointer;
+}
+
+.sidebarCopyrightContainer .text:hover {
+    color: #c0d3d3;
+}
+
+.sidebarCopyrightContainer .searchInputs {
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.searchInputs:focus {
+    outline: none;
+}
+
+.searchInputs::placeholder {
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.sidebarContentContainer {
+    flex: 2;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarContentContainer .sidebarItem {
+    color: white;
+    cursor: pointer;
+    padding-right: 16px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sidebarItem a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebarItem:hover a {
+    color: #c0d3d3;
+}
+
+.sidebarTitleContainer {
+    flex: 1;
+    padding-left: 50px;
+}
+
+
+.sidebarTitleContainer a {
+    text-decoration: none;
+}
+
+
+.sidebarTitleContainer .sidebarTitleText {
+    color: #fff;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 700;
+    padding: 20px 0 0px 0px;
+}
+
+.sidebarTitleContainer .sidebarSubtitleText {
+    padding-top: 0px;
+    margin-top: -10px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+form {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.loginContainer input {
+    font-size: 15px;
+    width: 100%;
+    padding: 5px 0px;
+
+    height: 45px;
+
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.csvUpload {
+    margin-top: 24px;
+	position: relative;
+	display: inline-block;
+}
+
+.csvLabel {
+    display: block;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.csvLabel:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+}
+    
+.csvInput {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    right: 0;
+    bottom: 40px;
+    opacity: 0;
+}
+
+.submitButton {
+    margin-top: auto;
+    margin-bottom: 8px;
+    margin-left: auto;
+}
+
+.submitButton button {
+    border: 0px;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #1f6650;
+    border-radius: 5px;
+}
