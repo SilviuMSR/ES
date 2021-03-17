@@ -16,7 +16,7 @@ class Keycloak extends AbstractProvider
     use BearerAuthorizationTrait;
 
     /**
-     * Keycloak URL, eg. http://pixelatus.com:8080/auth.
+     * Keycloak URL, eg. http://localhost:8080/auth.
      *
      * @var string
      */

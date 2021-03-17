@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // Check existence of id parameter before processing further
     // Include config file
     require_once "config.php";
@@ -12,7 +13,7 @@
 
         $sql = "delete from xai where id='$idToDelete'";
         if ($link->query($sql) === TRUE) {
-            header("Location: http://pixelatus.com/competition.php?deleted=true");
+            header("Location: http://localhost/competition.php?deleted=true");
         } else {
             echo "Error: " . $sql . "<br>" . $link->error;
         }

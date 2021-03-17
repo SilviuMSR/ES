@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 session_start();
 function alertxai($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
@@ -13,11 +14,11 @@ if (isset($_GET['added']) && $_GET['added'] == 'false') {
 
     
     //     $provider = new Stevenmaguire\OAuth2\Client\Provider\Keycloak([
-    //         'authServerUrl' => 'http://pixelatus.com:8080/auth',
+    //         'authServerUrl' => 'http://localhost:8080/auth',
     //         'realm' => 'es', 
     //         'clientId' => 'es-client', 
     //         'clientSecret' => '5a7b20be-f607-4307-b450-28092ddcbca2', 
-    //         'redirectUri' => 'http://pixelatus.com/ES/xai.php']);
+    //         'redirectUri' => 'http://localhost/ES/xai.php']);
     
     //     if (!isset($_GET['code'])) {
     //         // If we don't have an authorization code then get one

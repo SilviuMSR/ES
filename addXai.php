@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // Check existence of id parameter before processing further
     // Include config file
 //     ini_set('display_errors', 1);
@@ -25,7 +26,7 @@ function alert($msg) {
         $expireDate = $_POST["expireDate"];
         $sql = "insert into xai (name ,description, methods, dataSets, code, category, expireDate, user,rules) VALUES ('$xaiName' ,'$descr', '$meth', '$data', '$code', '$category', '$expireDate', '$username', '$rules')";
         if ($link->query($sql) === TRUE) {
-            header("Location: http://pixelatus.com/competition.php?added=true");
+            header("Location: http://localhost/competition.php?added=true");
         } else {
             alert("Eroare!");
             echo "Error: " . $sql . "<br>" . $link->error;
@@ -33,7 +34,7 @@ function alert($msg) {
         $link->close();
       }
       else {
-        header("Location: http://pixelatus.com/xai.php?added=false");
+        header("Location: http://localhost/xai.php?added=false");
       }
     }
     else {

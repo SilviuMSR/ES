@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // Check existence of id parameter before processing further
     // Include config file
 function alertEdit($msg) {
@@ -28,14 +29,14 @@ function alertEdit($msg) {
             $expireDate = $_POST["expireDate"];
             $sql = "update xai set name='$xaiName' ,description='$descr', methods='$meth', dataSets='$data',code='mysql_real_escape_string($code)', category='$category', expireDate='$expireDate', rules='$rules' where id=".$_SESSION['xaiToEdit']."";
             if ($link->query($sql) === TRUE) {
-                header("Location: http://pixelatus.com/competition.php?edit=true");
+                header("Location: http://localhost/competition.php?edit=true");
             } else {
                 alert("Eroare!");
                 echo "Error: " . $sql . "<br>" . $link->error;
             }
           }
           else {
-            header("Location: http://pixelatus.com/competition.php?edit=false");
+            header("Location: http://localhost/competition.php?edit=false");
           }
     }
     $link->close();

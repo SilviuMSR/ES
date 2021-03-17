@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
     require_once "config.php";
     function alert($msg) {
@@ -20,7 +21,7 @@ session_start();
             if ($current_user['username']) {
                 $_SESSION['username'] = $current_user['username'];
                 $_SESSION['userid'] = $current_user['id'];
-		echo "<script type='text/javascript'>window.location.href = 'http://pixelatus.com/home.php?logged=true'; </script>";
+		echo "<script type='text/javascript'>window.location.href = 'http://localhost/home.php?logged=true'; </script>";
             }
          else {
             alert("Fail to login");
@@ -39,7 +40,7 @@ session_start();
     </div>
     <div class="sidebarContentContainer">
                 <div class="sidebarItem"><a href="home.php">HOME</a></div>
-                <?php if($_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
+                <?php if($_SESSION && $_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
                 <div class="sidebarItem"><a href="competition.php">COMPETITION</a></div>
                 <div class="sidebarItem"><a href="contact.php">CONTACT</a></div>
     </div>

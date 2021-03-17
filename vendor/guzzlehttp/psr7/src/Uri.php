@@ -18,7 +18,7 @@ class Uri implements UriInterface
      * we apply this default host when no host is given yet to form a
      * valid URI.
      */
-    const HTTP_DEFAULT_HOST = 'pixelatus.com';
+    const HTTP_DEFAULT_HOST = 'localhost';
 
     private static $defaultPorts = [
         'http'  => 80,

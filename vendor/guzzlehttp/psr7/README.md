@@ -701,10 +701,10 @@ of normalizations to apply. The following normalizations are available:
 - `UriNormalizer::REMOVE_DEFAULT_HOST`
 
     Removes the default host of the given URI scheme from the URI. Only the "file" scheme defines the default host
-    "pixelatus.com". All of `file:/myfile`, `file:///myfile`, and `file://pixelatus.com/myfile` are equivalent according to
+    "localhost". All of `file:/myfile`, `file:///myfile`, and `file://localhost/myfile` are equivalent according to
     RFC 3986.
 
-    Example: `file://pixelatus.com/myfile` → `file:///myfile`
+    Example: `file://localhost/myfile` → `file:///myfile`
 
 - `UriNormalizer::REMOVE_DEFAULT_PORT`
 

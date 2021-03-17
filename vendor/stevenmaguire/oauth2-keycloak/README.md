@@ -20,7 +20,7 @@ composer require stevenmaguire/oauth2-keycloak
 
 Usage is the same as The League's OAuth client, using `\Stevenmaguire\OAuth2\Client\Provider\Keycloak` as the provider.
 
-Use `authServerUrl` to specify the Keycloak server URL. You can lookup the correct value from the Keycloak client installer JSON under `auth-server-url`, eg. `http://pixelatus.com:8080/auth`.
+Use `authServerUrl` to specify the Keycloak server URL. You can lookup the correct value from the Keycloak client installer JSON under `auth-server-url`, eg. `http://localhost:8080/auth`.
 
 Use `realm` to specify the Keycloak realm name. You can lookup the correct value from the Keycloak client installer JSON under `resource`, eg. `master`.
 

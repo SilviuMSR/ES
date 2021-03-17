@@ -1,6 +1,7 @@
 
 <style><?php include 'xai.css'; ?></style>
 <?php
+error_reporting(0);
         // Use this to interact with an API on the users behalf
 // Check existence of id parameter before processing further
     // Include config file
@@ -36,8 +37,8 @@ style="'; if($row["id"] == $_GET['descriptionId']) echo 'color: #00135f; font-we
                 </button>
                 </form>';
                 echo '<div style="display: flex; flex-direction:row; margin-left: auto">';
-                if($_SESSION['username'] == 'ESADMIN') echo '<form style="margin-left: auto" action="deleteXai.php" method="POST"><button class="descriptionButton" style="font-weight:bold" name="deleteId" value='.$row["id"].'>X</button></form>';
-                if($_SESSION['username'] == 'ESADMIN' || $_SESSION['username'] == $row['user']) echo '<form style="margin-left: auto" action="editXai.php?populate=true" method="POST"><button class="descriptionButton" style="font-weight:bold" name="editId" value='.$row["id"].'>EDIT</button></form>';
+                if( $_SESSION && $_SESSION['username'] == 'ESADMIN') echo '<form style="margin-left: auto" action="deleteXai.php" method="POST"><button class="descriptionButton" style="font-weight:bold" name="deleteId" value='.$row["id"].'>X</button></form>';
+                if($_SESSION && $_SESSION['username'] == 'ESADMIN' || $_SESSION['username'] == $row['user']) echo '<form style="margin-left: auto" action="editXai.php?populate=true" method="POST"><button class="descriptionButton" style="font-weight:bold" name="editId" value='.$row["id"].'>EDIT</button></form>';
                 echo '</div></div>';
             }
         } else {

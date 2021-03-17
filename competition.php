@@ -1,15 +1,16 @@
 
     <?php 
     session_start();
+    error_reporting(0);
     // require 'vendor/autoload.php';
     // session_start();
     
     //     $provider = new Stevenmaguire\OAuth2\Client\Provider\Keycloak([
-    //         'authServerUrl' => 'http://pixelatus.com:8080/auth',
+    //         'authServerUrl' => 'http://localhost:8080/auth',
     //         'realm' => 'es', 
     //         'clientId' => 'es-client', 
     //         'clientSecret' => '5a7b20be-f607-4307-b450-28092ddcbca2', 
-    //         'redirectUri' => isset($_GET['descriptionId']) ? 'http://pixelatus.com/ES/competition.php?descriptionId='.$_GET['descriptionId'] : 'http://pixelatus.com/ES/competition.php'        ]);
+    //         'redirectUri' => isset($_GET['descriptionId']) ? 'http://localhost/ES/competition.php?descriptionId='.$_GET['descriptionId'] : 'http://localhost/ES/competition.php'        ]);
     
     //     if (!isset($_GET['code'])) {
     //         // If we don't have an authorization code then get one
@@ -110,7 +111,7 @@ $getRelation = "Select * from agreed where user_id = ".$_SESSION['userid']. " an
     </div>
     <div class="sidebarContentContainer">
     <div class="sidebarItem"><a href="home.php">HOME</a></div>
-                <?php if($_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
+                <?php if($_SESSION && $_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
                 <div class="sidebarItem"><a href="competition.php">COMPETITION</a></div>
                 <div class="sidebarItem"><a href="contact.php">CONTACT</a></div>
     </div>
@@ -241,7 +242,7 @@ $getRelation = "Select * from agreed where user_id = ".$_SESSION['userid']. " an
                                     <div><ul style="padding-left: 18px">';
                                     while($file = $filesPath->fetch_assoc()) {
                                         $splitFileName = explode("/", $file["csv_path"]);
-                                        echo '<li>'. $splitFileName[count($splitFileName) - 1].' - '. $file['username'] . ' - '. $file["added_date"] . ''; if ($_SESSION['username'] && ($_SESSION['username'] == $row["user"] || $_SESSION['username'] == 'ESADMIN')) echo '<a href="http://pixelatus.com/uploads/'.$splitFileName[count($splitFileName) - 1].'" download>Descarca</a>'; echo '</li>';
+                                        echo '<li>'. $splitFileName[count($splitFileName) - 1].' - '. $file['username'] . ' - '. $file["added_date"] . ''; if ($_SESSION['username'] && ($_SESSION['username'] == $row["user"] || $_SESSION['username'] == 'ESADMIN')) echo '<a href="http://localhost/uploads/'.$splitFileName[count($splitFileName) - 1].'" download>Descarca</a>'; echo '</li>';
                                     }
                                     echo '</ul>
                                     </div>

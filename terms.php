@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 session_start();
 ?>
 <style><?php include 'terms.css'; ?></style>
@@ -12,7 +13,7 @@ session_start();
     </div>
     <div class="sidebarContentContainer">
                 <div class="sidebarItem"><a href="home.php">HOME</a></div>
-                <?php if($_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
+                <?php if($_SESSION && $_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
                 <div class="sidebarItem"><a href="competition.php">COMPETITION</a></div>
                 <div class="sidebarItem"><a href="contact.php">CONTACT</a></div>
     </div>

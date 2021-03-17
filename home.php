@@ -1,5 +1,6 @@
 
     <?php
+    error_reporting(0);
     session_start();
     function alert($msg) {
         echo "<script type='text/javascript'>alert('$msg');</script>";
@@ -11,11 +12,11 @@
     // session_start();
     
     //     $provider = new Stevenmaguire\OAuth2\Client\Provider\Keycloak([
-    //         'authServerUrl' => 'http://pixelatus.com:8080/auth',
+    //         'authServerUrl' => 'http://localhost:8080/auth',
     //         'realm' => 'es', 
     //         'clientId' => 'es-client', 
     //         'clientSecret' => '5a7b20be-f607-4307-b450-28092ddcbca2', 
-    //         'redirectUri' => 'http://pixelatus.com/ES/home.php']);
+    //         'redirectUri' => 'http://localhost/ES/home.php']);
     
     //     if (!isset($_GET['code'])) {
     //         // If we don't have an authorization code then get one
@@ -70,20 +71,20 @@
             </div>
             <div class="sidebarContentContainer">
             <div class="sidebarItem"><a href="home.php">HOME</a></div>
-            <?php if($_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
+            <?php if($_SESSION && $_SESSION['username']) echo '<div class="sidebarItem"><a href="xai.php">XAI</a></div>'; ?>
                 <div class="sidebarItem"><a href="competition.php">COMPETITION</a></div>
                 <div class="sidebarItem"><a href="contact.php">CONTACT</a></div>
             </div>
             <div class="sidebarCopyrightContainer">
             <?php //if ($username) echo '<span class="text sidebarItem"><a>Logout</a></span>'; else echo '<span class="text sidebarItem"><a href="login.php">Login</a></span>'; ?>
             <span class="text sidebarItem"><?php 
-            if ($_SESSION['username']) {
+            if ($_SESSION && $_SESSION['username']) {
                 echo '<span>'; echo $_SESSION['username']; echo '</span>';
                 } else {
                     echo '<a href="login.php">Login</a>';
                 } ?>   </span>
                             <span class="text sidebarItem"><?php 
-            if ($_SESSION['username']) {
+            if ($_SESSION && $_SESSION['username']) {
                 echo '<a href="logout.php">'; echo 'Logout'; echo '</a>';
                 }?>   </span>
             <span class="text sidebarItem"><a href="terms.php">Terms</a></span>
@@ -91,7 +92,6 @@
     </div>
     <div class="homeContainer">
         <div class="homeTitle">
-      
 <p style="text-align: center">Welcome to XAIES,</p>
                 <p>the expert platform for Explainable Artificial Intelligence solutions and systems. We use well-established models like the versions of
 the LIME (Local Interpretable Model-Agnostic Explanations) algorithm, activations maps, deep Taylor decompositions, etc.  and new models based on computational topology and spline-type spaces interpretability.
